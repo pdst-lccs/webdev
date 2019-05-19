@@ -1,0 +1,19 @@
+<style>
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: double;
+  outline-color: green;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: outset;
+  outline-color: yellow;
+}
+</style>

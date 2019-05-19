@@ -1,0 +1,25 @@
+<style>
+/* These styles will style our link
+   in all states */
+a {
+  color: blue;
+  font-weight: bold;
+}
+
+/* We want visited links to be the same color
+   as non visited links */
+a:visited {
+  color: blue;
+}
+
+/* We highlight the link when it is
+   hovered over (mouse over), activated (mouse down)
+   or focused (keyboard) */
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}
+
+</style>

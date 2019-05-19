@@ -1,0 +1,9 @@
+<style>
+/* All elements with an attribute "href" with values
+   starting with "http" will have an arrow added after their
+   content (to indicate they are external links) */
+[href^=http]::after {
+  content: '⤴';
+}
+
+</style>

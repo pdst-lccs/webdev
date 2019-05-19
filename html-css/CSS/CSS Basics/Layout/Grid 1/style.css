@@ -1,0 +1,15 @@
+ <style>
+* {box-sizing: border-box;}
+        
+    .wrapper > div {
+        border-radius: 5px;
+        background-color: rgb(207,232,220);
+        padding: 1em;
+    }
+    .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+</style>

@@ -1,0 +1,8 @@
+<style>
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+</style>
