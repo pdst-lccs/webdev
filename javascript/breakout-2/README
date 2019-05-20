@@ -1,0 +1,124 @@
+Files for Breakout 2 - see manual Page 214-220
+
+CODE FOR TASK 1
+
+feedback.style.backgroundColor = red'; // in need of a home!
+
+function toggleNumber() {
+    const computerNumber = document.getElementById('computerNumber');
+    if (checkbox.checked) {
+      computerNumber.style.visibility = 'visible';
+      computerNumber.textContent = secretNumber;
+    } else {
+      computerNumber.style.visibility = 'hidden';
+    }
+}
+
+<input id="showNumberCkBx" type="checkbox">
+<label id="computerNumber"></label>
+
+feedback.style.backgroundColor = 'green'; // help – I’m lost!
+
+let checkbox = document.getElementById("showNumberCkBx");
+checkbox.addEventListener('click', toggleNumber);
+ 
+
+CODE FOR TASK 2
+
+function displayStats() {
+   // Display the number of guesses
+   let statsPara = document.getElementById("stats");
+   statsPara.textContent = "You took "+guessCount+" guesses";
+}
+
+<div id="results">
+  <p id="rightOrWrong"></p>
+  <p id="lowOrHi"></p>
+  <p>Previous Guesses:</p>
+  <ul id="prevGuesses"></ul>
+  <p id="stats"></p>
+</div>
+
+// Display each user's guess in the division for prevGuesses
+let unorderedList = document.getElementById("prevGuesses");
+let newListItem = document.createElement("li");
+newListItem.textContent = guessField.value;
+unorderedList.appendChild(newListItem);
+
+// Display a helpful message to the user
+let helpfulMsgField = document.getElementById("lowOrHi");
+if (userGuess < secretNumber) {
+    helpfulMsgField.textContent = 'Too low!' ;
+} else if (userGuess > secretNumber) {
+    helpfulMsgField.textContent = 'Too high!';
+} else if (userGuess === secretNumber) {
+    helpfulMsgField.textContent = 'Just right!';
+}
+
+displayStats(); // call the function to display the number of guesses
+ 
+CODE FOR TASK 3
+
+
+function gameOver() {
+  submitBtn.disabled = true;
+  newGameBtn.disabled = false;
+  displayStats();
+}
+
+const newGameBtn = document.getElementById('newgame-btn');
+newGameBtn.addEventListener('click', newGame);
+
+<button id="newgame-btn" type="button">New game</button>
+
+function newGame() {
+  secretNumber = Math.floor(Math.random() * 10) + 1;
+  guessCount = 0;
+
+  submitBtn.disabled = false;
+  newGameBtn.disabled = true;
+
+  document.getElementById('computerNumber').textContent = "";
+  document.getElementById("showNumberCkBx").checked = false;
+  document.getElementById('rightOrWrong').textContent = "";
+  document.getElementById("lowOrHi").textContent = "";
+  document.getElementById("prevGuesses").innerHTML = "";
+  document.getElementById("stats").textContent = "";
+}
+
+You will also need to add lines to call the functions gameOver and newGame.
+
+CODE FOR TASK 4
+
+// Handler for the spinners 
+function setSecretNo() {
+
+  minValue = Number(document.getElementById('low').value);
+  maxValue = Number(document.getElementById('high').value);
+  secretNumber = Math.floor(Math.random() * (maxValue - minValue +1)) + minValue;  
+  
+  // update the secret number on the display
+  document.getElementById('computerNumber').textContent = secretNumber;
+  
+}
+
+// Create a listener for the two spinners (the same one will do them both)
+document.getElementById('low').addEventListener('change', setSecretNo);
+document.getElementById('high').addEventListener('change', setSecretNo);
+
+<div>
+  <label for="low">Min: </label>
+  <input id="low" type="number" min="1" max="100" step="1" value="1">
+  <label for="high">Max: </label>
+  <input id="high" type="number" min="1" max="100" step="1" value="100">
+</div>
+
+// This code needs to be grafted in the function ‘newGame’
+minValue = Number(document.getElementById('low').value);
+maxValue = Number(document.getElementById('high').value);
+secretNumber = Math.floor(Math.random() * (maxValue - minValue +1)) + minValue;
+
+let minValue, maxValue;
+ 
+
+
