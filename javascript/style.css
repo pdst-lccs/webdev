@@ -1,0 +1,46 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+
+canvas {
+		display: block;
+}
+
+label {
+  font-weight: bold;  
+}
+
+div {
+  padding-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 150px;
+}
+
+/*
+p {
+  background: #FFC125;
+  color: #5E2612;
+  padding: 10px;
+  visibility: hidden;
+}
+*/
+
+/*
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+*/
+/*
+body {
+  font-family: helvetica, sans-serif;
+  width: 350px;
+}
+*/
