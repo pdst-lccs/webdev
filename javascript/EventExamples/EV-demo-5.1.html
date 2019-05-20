@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Demo 5 - Guess Game v1</title>    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+    <h1>Number guessing game</h1>
+    <p>Guess a number between min and max (incl.)</p>
+    
+    <div>
+      <label for="low">Min: </label>
+      <input id="low" type="number" min="1" max="100" step="1" value="1">
+      <label for="high">Max: </label>
+      <input id="high" type="number" min="1" max="100" step="1" value="100">
+    </div>
+
+    
+    <label for="guessField">Enter a guess: </label>
+    <input type="text" id="guessField">
+    <button id="submit-btn" type="button">Submit guess</button>
+    <button id="newgame-btn" type="button">New game</button>
+    <br>
+    <input id="showNumberCkBx" type="checkbox">
+    <label id="computerNumber"></label>
+
+    <div id="results">
+      <p id="rightOrWrong"></p>
+      <p id="lowOrHi"></p>
+      <p>Previous Guesses:</p>
+      <ul id="prevGuesses"></ul>
+      <p id="stats"></p>
+    </div>
+
+    <!-- import the webpage's javascript file -->
+    <script src="EV-demo-5.1.js"></script>
+
+  </body>
+</html>
