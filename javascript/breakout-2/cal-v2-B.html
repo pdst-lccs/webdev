@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Online CAL V2</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+    <h1>Online Computer Aided Learning V2</h1>
+    
+    <p>Select an operation</p>
+    
+    <form id="opForm">
+      <label><input type="radio" name="opForm" value="0" checked> Addition</label>
+      <label><input type="radio" name="opForm" value="1"> Subtraction</label>
+      <label><input type="radio" name="opForm" value="2"> Multiplication</label>
+      <label><input type="radio" name="opForm" value="3"> Division</label>
+    </form>
+    
+
+    <div>
+      <p>Set the range of the 1st operand</p>
+      <label for="low1">Min: </label>
+      <input id="low1" type="number" min="1" max="100" step="1" value="1">
+      <label for="high1">Max: </label>
+      <input id="high1" type="number" min="1" max="100" step="1" value="100">
+    </div>
+
+    <div>
+      <p>Set the range of the 2nd operand</p>
+      <label for="low2">Min: </label>
+      <input id="low2" type="number" min="1" max="100" step="1" value="1">
+      <label for="high2">Max: </label>
+      <input id="high2" type="number" min="1" max="100" step="1" value="100">
+    </div>
+    
+    <div>
+     <button id="generate-btn" type="button">Generate a problem</button>
+     <p id="problem"></p>   
+    </div>
+    
+    <form id="resultForm">
+      <label><input type="radio" name="resultForm" id="radio0" value="0"> </label><br>
+      <label><input type="radio" name="resultForm" id="radio1" value="1"> </label><br>
+      <label><input type="radio" name="resultForm" id="radio2" value="2"> </label><br>
+      <label><input type="radio" name="resultForm" id="radio3" value="3"> </label><br>
+    </form>
+
+    <p id="feedback"></p>
+    
+    <!-- import the webpage's javascript file -->
+    <script src="cal-v2-B.js" defer></script>
+
+  </body>
+</html>
